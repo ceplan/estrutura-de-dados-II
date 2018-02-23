@@ -1,6 +1,7 @@
 # Estrutura de Dados II - 201801
 
-Horário e ensalamento pode ser consultado [aqui](http://www.ceplan.udesc.br/arquivos/id_submenu/768/horario_2018_1.pdf)
+Horário e ensalamento pode ser consultado [aqui](http://www.ceplan.udesc.br/arquivos/id_submenu/768/horario_2018_1.pdf).
+
 Informações sobre: ementa créditos, carga horária, objetivos, pré-requisitos, equivalências, programa e bibliografia. Veja [aqui](http://www.ceplan.udesc.br/?id=757).
 
 Material didático em formato eletrônico
@@ -10,6 +11,7 @@ Material didático em formato eletrônico
 - Caderno de exercícios de programação do DCC/IME/USP: [Em PDF](https://www.ime.usp.br/~macmulti/caderno-exercicios-versao2005.pdf)
 
 Linguagem de programação utilizada: Java (utilizando Maven)
+
 IDE recomendada: NetBeans
 
 # Objetivos
@@ -28,7 +30,9 @@ Possibilitar ao discente a habilidade de analisar problemas e desenvolver soluç
 - Prova Individual 3: 28/06/2018
 - Exame Final: 05/07/2018
 
-# Sistema de Avaliação (Resoluções podem ser acessadas [aqui](http://www.ceplan.udesc.br/?id=168):
+# Sistema de Avaliação
+
+As resoluções sobre o sistema de avaliação podem ser encontradas [aqui](http://www.ceplan.udesc.br/?id=168).
 
 O sistema de avaliação consiste de dois itens:
 - Nota
