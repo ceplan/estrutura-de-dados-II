@@ -76,3 +76,7 @@ Como a adesão aos exercícios de laboratório é espetacular, iremos usá-los c
 - Visualização e Comparação de Algoritmos de Ordenação. Veja [aqui](https://youtu.be/ZZuD6iUe3Pc)
 - Algoritmos de Ordenação. Veja [aqui](https://youtu.be/INHF_5RIxTE)
 - Algoritmos de Ordenação Detalhado. Comece por [aqui](https://youtu.be/P00xJgWzz2c)
+
+# Professor
+
+MSc. [Jackson Antonio do Prado Lima](https://github.com/jacksonpradolima)
