@@ -1,0 +1,8 @@
+#surefire
+#Thu Mar 01 18:05:24 BRT 2018
+maven.ext.class.path=C\:\\Program Files\\NetBeans 8.2\\java\\maven-nblib\\netbeans-eventspy.jar
+user.dir=C\:\\Users\\Prado Lima\\Documents\\github\\estrutura-de-dados-II\\201801\\exemplos\\exemplosaula
+file.encoding=UTF-8
+localRepository=C\:\\Users\\Prado Lima\\.m2\\repository
+basedir=C\:\\Users\\Prado Lima\\Documents\\github\\estrutura-de-dados-II\\201801\\exemplos\\exemplosaula
+test=br.udesc.ceplan.jacksonpradolima.exemplosaula.Aula02.ManipulacaoArquivosTest
