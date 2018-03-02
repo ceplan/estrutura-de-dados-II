@@ -33,7 +33,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 /**
- * ManipulacaoArquivos da ManipulacaoArquivos
+ * Exemplos de Manipulação de arquivos
  *
  * @author Jackson Antonio do Prado Lima <jacksonpradolima at gmail.com>
  */
@@ -69,6 +69,7 @@ public class ManipulacaoArquivos {
         }
 
         FileWriter f = new FileWriter(new File(diretorioRaiz, "arquivo.txt"));
+        // Escreve no arquivo
         f.write("Hello World!");
 
         // Lista os arquivos de um diretório
@@ -79,6 +80,7 @@ public class ManipulacaoArquivos {
             System.out.println(String.format("Caminho relativo: %s", filho));
         }
 
+        // Libera o arquivo
         f.close();
     }
 
@@ -88,22 +90,17 @@ public class ManipulacaoArquivos {
      * @param file Arquivo a ser lido (Nome + Path)
      */
     public void leArquivo(String file) {
-        //String dir = "c:/udesc/arquivo.txt";
-
         System.out.println("Leitura 1: lendo os bytes");
 
-        //Tipo 1
         try (Reader r = new FileReader(file)) {
             int c;
             // -1 representa fim do arquivo
             while ((c = r.read()) != -1) {
                 System.out.println("Li o character: " + (char) c);
-
             }
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ManipulacaoArquivos.class
                     .getName()).log(Level.SEVERE, "Arquivo não existe ou está inacessível.", ex);
-
         } catch (IOException ex) {
             Logger.getLogger(ManipulacaoArquivos.class
                     .getName()).log(Level.SEVERE, "Erro de leitura", ex);
@@ -121,12 +118,14 @@ public class ManipulacaoArquivos {
             do {
                 // Lê linha por linha
                 linha = buf.readLine();
+                // Mostra de acordo com o "if ternário".
+                // Se a linha for nula mostra uma mensagem, senão mostra o que
+                // tem na variável linha
                 System.out.println(linha == null ? "Fim da leitura do arquivo." : linha);
             } while (linha != null);
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ManipulacaoArquivos.class
                     .getName()).log(Level.SEVERE, "Arquivo não existe ou está inacessível.", ex);
-
         } catch (IOException ex) {
             Logger.getLogger(ManipulacaoArquivos.class
                     .getName()).log(Level.SEVERE, "Erro de leitura", ex);
@@ -142,7 +141,7 @@ public class ManipulacaoArquivos {
         try (FileWriter out = new FileWriter(file)) {
             System.out.println("Digite um texto: \n");
             byte a;
-            // Aguarda digitação do usuário
+            // Aguarda digitação do usuário e termina quando der "enter"
             while ((a = (byte) System.in.read()) != '\n') {
                 out.write(a);
             }
@@ -158,7 +157,8 @@ public class ManipulacaoArquivos {
      * @param file Arquivo a ser utilizado (Nome + Path)
      */
     public void escreveInfoBuffer(String file) {
-        // True realiza append.
+        // True realiza append no arquivo, ou seja, ele não sobrescreve 
+        // o arquivo, apenas vai adicionando no final dele.
         try (BufferedWriter out = new BufferedWriter(new FileWriter(file, true))) {
             for (int i = 1; i <= 100; i++) {
                 out.write(String.format("Esta é a linha %s do texto.\n", i));
@@ -185,7 +185,6 @@ public class ManipulacaoArquivos {
         } catch (FileNotFoundException ex) {
             Logger.getLogger(ManipulacaoArquivos.class
                     .getName()).log(Level.SEVERE, "Arquivo não existe ou está inacessível.", ex);
-
         } catch (IOException ex) {
             Logger.getLogger(ManipulacaoArquivos.class
                     .getName()).log(Level.SEVERE, "Erro de leitura", ex);
@@ -214,8 +213,7 @@ public class ManipulacaoArquivos {
                 }
             }
 
-            File arquivo = new File(diretorioRaiz, "lixo.dat");
-            out = new FileOutputStream(arquivo);
+            out = new FileOutputStream(new File(diretorioRaiz, "lixo.dat"));
             out.write(new byte[]{'l', 'i', 'x', 'o'});
         } catch (IOException ex) {
             Logger.getLogger(ManipulacaoArquivos.class
@@ -250,10 +248,9 @@ public class ManipulacaoArquivos {
         }
 
         try (FileOutputStream out = new FileOutputStream(new File(diretorioRaiz, "lixo.dat"))) {
-
             System.out.println("Digite um texto: \n");
             byte a;
-            // Aguarda digitação do usuário
+            // Aguarda digitação do usuário e termina quando der "enter"
             while ((a = (byte) System.in.read()) != '\n') {
                 out.write(a);
             }

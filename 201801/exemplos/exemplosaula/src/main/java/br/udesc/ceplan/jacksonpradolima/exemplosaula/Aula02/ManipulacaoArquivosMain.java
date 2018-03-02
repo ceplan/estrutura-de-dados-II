@@ -16,6 +16,8 @@
 package br.udesc.ceplan.jacksonpradolima.exemplosaula.Aula02;
 
 /**
+ * Classe para testar os exemplos de manipulação de arquivos que utiliza
+ * informações de entrada vindas do usuário
  *
  * @author Jackson Antonio do Prado Lima <jacksonpradolima at gmail.com>
  */
@@ -30,7 +32,7 @@ public class ManipulacaoArquivosMain {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        
+
         System.out.println("\n\nEscrita 2:");
         try {
             new ManipulacaoArquivos().escreveOutputStreamB("c:/udesc/ujfcbvjgutjfchjgkutyfhgc");

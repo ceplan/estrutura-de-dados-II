@@ -20,7 +20,7 @@ import static org.junit.Assert.*;
 import org.junit.Ignore;
 
 /**
- *
+ * Casos de teste para testar os exemplos de manipulação de arquivos
  * @author Jackson Antonio do Prado Lima <jacksonpradolima at gmail.com>
  */
 public class ManipulacaoArquivosTest {
@@ -70,21 +70,6 @@ public class ManipulacaoArquivosTest {
         }
     }
 
-//    @Test
-//    @Ignore
-//    public void escreveInfoTest() {
-//        try {
-//            ManipulacaoArquivos fle = new ManipulacaoArquivos();
-//
-//            fle.escreveInfo("c:/udesc/arquivoInfo.txt");
-//
-//            assertTrue(true);
-//        } catch (Exception e) {
-//            assertTrue(true);
-//            e.printStackTrace();
-//        }
-//    }
-
     @Test
     @Ignore
     public void escreveInfoBufferTest() {
@@ -119,7 +104,7 @@ public class ManipulacaoArquivosTest {
     }
 
     @Test
-//    @Ignore
+    @Ignore
     public void escreveOutputStreamTest() {
         try {
             ManipulacaoArquivos fle = new ManipulacaoArquivos();
@@ -132,19 +117,4 @@ public class ManipulacaoArquivosTest {
             e.printStackTrace();
         }
     }
-
-//    @Test
-//    @Ignore
-//    public void escreveOutputStreamBTest() {
-//        try {
-//            ManipulacaoArquivos fle = new ManipulacaoArquivos();
-//
-//            fle.escreveOutputStreamB("c:/udesc/arquivoOutB");
-//
-//            assertTrue(true);
-//        } catch (Exception e) {
-//            assertTrue(true);
-//            e.printStackTrace();
-//        }
-//    }
 }
