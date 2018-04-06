@@ -15,6 +15,7 @@
  */
 package br.udesc.ceplan.jacksonpradolima.exemplosaula.Aula03;
 
+import br.udesc.ceplan.jacksonpradolima.exemplosaula.aula03.Argparse4jMain;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Ignore;
