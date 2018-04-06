@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package br.udesc.ceplan.jacksonpradolima.exemplosaula.Aula02;
+package br.udesc.ceplan.jacksonpradolima.exemplosaula.aula02;
 
 /**
  * Classe para testar os exemplos de manipulação de arquivos que utiliza

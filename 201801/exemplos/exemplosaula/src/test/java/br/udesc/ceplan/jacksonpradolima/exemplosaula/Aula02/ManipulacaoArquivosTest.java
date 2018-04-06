@@ -15,6 +15,7 @@
  */
 package br.udesc.ceplan.jacksonpradolima.exemplosaula.Aula02;
 
+import br.udesc.ceplan.jacksonpradolima.exemplosaula.aula02.ManipulacaoArquivos;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Ignore;
