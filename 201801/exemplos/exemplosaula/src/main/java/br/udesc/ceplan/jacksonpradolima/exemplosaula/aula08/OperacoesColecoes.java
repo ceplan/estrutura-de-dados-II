@@ -54,14 +54,14 @@ public class OperacoesColecoes {
 
         System.out.println("Lista filtrada: " + Arrays.toString(filtroArray.toArray()));
 
+        // Remove itens repetidos
         filtroArray = new ArrayList<>(filtroArray.stream().distinct().collect(Collectors.toList()));
 
         System.out.println("Lista sem valores repetidos: " + Arrays.toString(filtroArray.toArray()));
 
         System.out.println("Total de itens na lista: " + filtroArray.size());
 
-        System.out.println("Lista invertida: " + Arrays.toString(filtroArray.toArray()));
-
+        // Inverte a lista
         Collections.reverse(filtroArray);
 
         String p = "[";
@@ -77,6 +77,5 @@ public class OperacoesColecoes {
 
         // busca binária
         System.out.println("[Busca binária] Posição no array: " + Collections.binarySearch(filtroArray, 8));
-
     }
 }

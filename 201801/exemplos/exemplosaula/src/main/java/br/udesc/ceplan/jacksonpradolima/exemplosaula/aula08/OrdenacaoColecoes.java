@@ -38,7 +38,7 @@ public class OrdenacaoColecoes {
 
         System.out.println("Lista ordenada: " + Arrays.toString(lista.toArray()));
 
-        Collections.sort(lista, Collections.reverseOrder());
+        Collections.sort(lista, Collections.reverseOrder()); // ou  Collections.reverse(lista);
 
         System.out.println("Lista ordenada descendentemente: " + Arrays.toString(lista.toArray()));
     }
