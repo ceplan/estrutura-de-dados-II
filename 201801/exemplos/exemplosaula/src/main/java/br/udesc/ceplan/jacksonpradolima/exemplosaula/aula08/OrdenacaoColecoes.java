@@ -20,11 +20,11 @@ import java.util.Arrays;
 import java.util.Collections;
 
 /**
- * Ordenações de um ArrayList
+ * Ordenações em coleções com um ArrayList
  *
  * @author Jackson Antonio do Prado Lima <jacksonpradolima at gmail.com>
  */
-public class OrdenacaoArrayList {
+public class OrdenacaoColecoes {
 
     public static void main(String[] args) {
         ArrayList<Integer> lista = new ArrayList<>();

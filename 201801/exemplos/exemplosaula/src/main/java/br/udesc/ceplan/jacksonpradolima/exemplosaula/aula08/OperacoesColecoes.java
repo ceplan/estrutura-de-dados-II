@@ -22,11 +22,11 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * Operações com Lista, neste exemplo usamos ArrayList
+ * Operações com Coleções, neste exemplo usamos ArrayList
  *
  * @author Jackson Antonio do Prado Lima <jacksonpradolima at gmail.com>
  */
-public class OperacoesArrayList {
+public class OperacoesColecoes {
 
     public static void main(String[] args) {
         ArrayList<Integer> lista = new ArrayList<>();
@@ -41,6 +41,8 @@ public class OperacoesArrayList {
         }
 
         System.out.println("Lista: " + Arrays.toString(lista.toArray()));
+        System.out.println("Maior valor: " + Collections.max(lista));
+        System.out.println("Menor valor: " + Collections.min(lista));
 
         //List<Integer> filtro = lista.stream().filter(p -> p > 5).collect(Collectors.toList());
         //Seleciona os valores maiores do que 5
@@ -56,10 +58,25 @@ public class OperacoesArrayList {
 
         System.out.println("Lista sem valores repetidos: " + Arrays.toString(filtroArray.toArray()));
 
-        Collections.reverse(filtroArray);
+        System.out.println("Total de itens na lista: " + filtroArray.size());
 
         System.out.println("Lista invertida: " + Arrays.toString(filtroArray.toArray()));
 
-        System.out.println("Total de itens na lista: " + filtroArray.size());
+        Collections.reverse(filtroArray);
+
+        String p = "[";
+        boolean first = true;
+        //outra forma de laço
+        for (Integer integer : filtroArray) {
+            p = first ? p + integer.toString() : p + ", " + integer;
+            first = false;
+        }
+        p += "]";
+
+        System.out.println("Lista invertida: " + p);
+
+        // busca binária
+        System.out.println("[Busca binária] Posição no array: " + Collections.binarySearch(filtroArray, 8));
+
     }
 }
