@@ -18,7 +18,8 @@ package br.udesc.ceplan.jacksonpradolima.exemplosaula.aula08;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collections;
-import java.util.List;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.stream.Collectors;
 
 /**
@@ -40,7 +41,23 @@ public class OperacoesColecoes {
             lista.add(i);
         }
 
+        Set<String> unique = new HashSet<>();
+
+        unique.addAll(lista.stream()
+                .map(m -> m.toString()) // Converto cada elemento da lista em string
+                .collect(Collectors.toList()));
+
         System.out.println("Lista: " + Arrays.toString(lista.toArray()));
+
+        // busca binária
+        System.out.println(
+                String.format("[Busca binária] Posição do valor %s no array: %s",
+                        8,
+                        Collections.binarySearch(lista, 8)
+                )
+        );
+
+        System.out.println("Unique: " + Arrays.toString(unique.toArray()));
         System.out.println("Maior valor: " + Collections.max(lista));
         System.out.println("Menor valor: " + Collections.min(lista));
 
@@ -54,8 +71,20 @@ public class OperacoesColecoes {
 
         System.out.println("Lista filtrada: " + Arrays.toString(filtroArray.toArray()));
 
+        // busca binária
+        System.out.println(
+                String.format("[Busca binária] Posição do valor %s no array: %s",
+                        8,
+                        Collections.binarySearch(filtroArray, 8)
+                )
+        );
+
         // Remove itens repetidos
-        filtroArray = new ArrayList<>(filtroArray.stream().distinct().collect(Collectors.toList()));
+        filtroArray = new ArrayList<>(
+                filtroArray.stream()
+                        .distinct()
+                        .collect(Collectors.toList())
+        );
 
         System.out.println("Lista sem valores repetidos: " + Arrays.toString(filtroArray.toArray()));
 
@@ -67,8 +96,8 @@ public class OperacoesColecoes {
         String p = "[";
         boolean first = true;
         //outra forma de laço
-        for (Integer integer : filtroArray) {
-            p = first ? p + integer.toString() : p + ", " + integer;
+        for (Integer bb : filtroArray) {
+            p = first ? p + bb : p + ", " + bb;
             first = false;
         }
         p += "]";
@@ -76,6 +105,11 @@ public class OperacoesColecoes {
         System.out.println("Lista invertida: " + p);
 
         // busca binária
-        System.out.println("[Busca binária] Posição no array: " + Collections.binarySearch(filtroArray, 8));
+        System.out.println(
+                String.format("[Busca binária] Posição do valor %s no array: %s",
+                        8,
+                        Collections.binarySearch(filtroArray, 8)
+                )
+        );
     }
 }
